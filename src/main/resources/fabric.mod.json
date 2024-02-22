@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "bettermovement",
+  "version": "1.0",
+  "name": "BetterMovement",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/piema/BetterMovement"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/bettermovement/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "yaboichips.bettermovement.client.BetterMovementClient"
+    ],
+    "main": [
+      "yaboichips.bettermovement.BetterMovement"
+    ]
+  },
+  "mixins": [
+    "bettermovement.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": ">=1.20.5-alpha.24.7.a"
+  }
+}
