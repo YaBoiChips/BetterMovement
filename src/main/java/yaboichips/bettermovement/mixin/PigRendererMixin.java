@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.entity.PigRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.Pig;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -24,8 +25,8 @@ public class PigRendererMixin extends MobRenderer<Pig, PigModel<Pig>> {
         this.addLayer(new WingLayer<>(((PigRenderer)(Object)this), context.getModelSet()));
     }
 
-    @Override
+    @Shadow
     public ResourceLocation getTextureLocation(Pig entity) {
-        return new ResourceLocation("textures/entity/pig/pig.png");
+        throw new IllegalStateException("mixin sucks");
     }
 }
